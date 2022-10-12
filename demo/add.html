@@ -1,0 +1,56 @@
+<!doctype html>
+<head>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+<script src="/js/jquery-2.2.4.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<title>Apron CRM</title>
+<meta charset="utf-8">
+</head>
+<body>
+<style>
+input[type=text]{
+   width:220px;
+}
+input[type=password]{
+   width:220px;
+}
+</style>
+<div class="topbar">
+<ul class="topbar">
+<li class="topbar header-location">Apron</li>
+<li class="topbar header-username">Вы вошли как Гость</li>
+<li class="topbar"><a class="btn btn-info logout-button" href="/login.php">Вход</a></li>
+</ul>
+<br>
+</div>
+<form action="index.html" method="POST">
+  <div class="mb-3">
+    <label for="exampleInputName1" class="form-label">Название устройства</label>
+    <input name="name" type="text" class="form-control" id="exampleInputName1" aria-describedby="nameHelp">
+    <div id="nameHelp" class="form-text">Например Oklick 105S</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputNumber1" class="form-label">Номер устройства</label>
+    <input name="number" type="text" class="form-control" id="exampleInputNumber1" aria-describedby="numberHelp">
+    <div id="numberHelp" class="form-text">Например 0000111234221</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputAbout1" class="form-label">Краткое описание</label>
+    <input name="about" type="text" class="form-control" id="exampleInputAbout1" aria-describedby="aboutHelp">
+	<div id="aboutHelp" class="form-text">Например Мышь проводная 800 dpi, светодиодный, USB Type-A, кнопки - 3</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputOwner1" class="form-label">Владелец</label>
+    <input name="owner" type="text" class="form-control" id="exampleInputOwner1" aria-describedby="ownerHelp">
+	<div id="ownerHelp" class="form-text">Например Иванов Александр Сергеевич</div>
+  </div>
+  <br>
+  <button name="submit" type="submit" class="btn btn-primary">Добавить</button>
+</form>
+<footer>
+<hr>
+<center>© 2022 Apron. <a href="https://github.com/zavsc/apron">Скачать</a></center>
+</footer>
+</body>
+</html>

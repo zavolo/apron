@@ -69,11 +69,22 @@ echo '<a class="btn btn-primary" href="/add.php">Добавить</a>';
 if(mysql_num_rows($devres)==0){ //Если в таблице пусто выводим ошибку
     echo '
 <div class="alert alert-danger" role="alert">Устройства не добавлены в систему!</div>';
-}else{ //Если в таблице что-то есть выводим список
-echo '<td>'.$devices['id'].'</td><td>'.$devices['name'].'</td><td>'.$devices['number'].'</td><td>'.$devices['about'].'</td><td>'.$devices['owner'].'</td><td>'.$devices['date'].'</td>';
+} else { //Если в таблице что-то есть выводим список
+do {
+echo '
+    <tr>
+        <th>Системный ID</th>
+        <th>Название</th>
+        <th>Номер устройства</th>
+        <th>Краткое описание</th>
+        <th>Владелец</th>
+	<th colspan=7>Дата</th>
+    </tr>
+<td>'.$devices['id'].'</td><td>'.$devices['name'].'</td><td>'.$devices['number'].'</td><td>'.$devices['about'].'</td><td>'.$devices['owner'].'</td><td>'.$devices['date'].'</td>';
+}
+while ($devices = mysql_fetch_array($devres));
 }
 ?>
-<!--<td>1</td><td>Oklick 105S</td><td>0000111234221</td><td>Мышь проводная 800 dpi, светодиодный, USB Type-A, кнопки - 3</td><td>Иванов Александр Сергеевич</td><td>12.10.2022 16:06</td>-->
 </table>
 <footer>
 <hr>
